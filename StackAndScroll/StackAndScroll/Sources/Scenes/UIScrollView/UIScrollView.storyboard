@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="J89-hW-Erq">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--UIStackView+UIScrollView-->
+        <scene sceneID="zaP-CB-tCD">
+            <objects>
+                <viewController id="J89-hW-Erq" userLabel="UIStackView+UIScrollView" customClass="UIScrollExampleViewController" customModule="StackAndScroll" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OGW-jy-efE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="da8-Bf-8gG">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="347"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="G7w-xu-6We">
+                                        <rect key="frame" x="8" y="8" width="359" height="398.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="359" placeholderIntrinsicHeight="20.5" text="Made with ❤️ at" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4lg-wz-Ouj">
+                                                <rect key="frame" x="0.0" y="0.0" width="359" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalCompressionResistancePriority="1000" placeholderIntrinsicWidth="359" placeholderIntrinsicHeight="42" image="inloopX" translatesAutoresizingMaskIntoConstraints="NO" id="niV-ys-mN4">
+                                                <rect key="frame" x="0.0" y="28.5" width="359" height="42"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="359" placeholderIntrinsicHeight="320" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s0O-bj-ivW">
+                                                <rect key="frame" x="0.0" y="78.5" width="359" height="320"/>
+                                                <mutableString key="text">This example shows hot to use UIScrollView with combination of UIStackView in Interface Builder. The example is pretty simple. You just drag the views to IB as usually. All you need to deal with is the UIScrollViewContentSize, which has to be defined. The height would be defined by the content, however the width has to be defined by constraint which sets the UIScrollViewWidth equal to UIViewController view’s width. That’s all the magic you need. 
+
+In case you would like to create the content of the stack view in code, refer to In code usage.</mutableString>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="G7w-xu-6We" secondAttribute="trailing" constant="8" id="BTy-eI-rdr"/>
+                                    <constraint firstItem="G7w-xu-6We" firstAttribute="top" secondItem="da8-Bf-8gG" secondAttribute="top" constant="8" id="W02-nT-kj5"/>
+                                    <constraint firstAttribute="bottom" secondItem="G7w-xu-6We" secondAttribute="bottom" constant="8" id="pht-la-ksE"/>
+                                    <constraint firstItem="G7w-xu-6We" firstAttribute="leading" secondItem="da8-Bf-8gG" secondAttribute="leading" constant="8" id="pqH-jp-ILO"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.923095703125" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="da8-Bf-8gG" firstAttribute="leading" secondItem="3ZP-iS-zo6" secondAttribute="leading" id="1ed-Ux-Xm8"/>
+                            <constraint firstItem="da8-Bf-8gG" firstAttribute="top" secondItem="OGW-jy-efE" secondAttribute="top" id="4og-ds-LiI"/>
+                            <constraint firstItem="4lg-wz-Ouj" firstAttribute="centerX" secondItem="3ZP-iS-zo6" secondAttribute="centerX" id="8ra-tM-dWd"/>
+                            <constraint firstItem="da8-Bf-8gG" firstAttribute="centerX" secondItem="3ZP-iS-zo6" secondAttribute="centerX" id="Gf9-1X-PH7"/>
+                            <constraint firstItem="3ZP-iS-zo6" firstAttribute="trailing" secondItem="4lg-wz-Ouj" secondAttribute="trailing" constant="8" id="Uia-Xd-VG0"/>
+                            <constraint firstItem="3ZP-iS-zo6" firstAttribute="trailing" secondItem="da8-Bf-8gG" secondAttribute="trailing" id="goe-G3-Tnu"/>
+                            <constraint firstItem="da8-Bf-8gG" firstAttribute="width" secondItem="OGW-jy-efE" secondAttribute="width" id="hWR-yG-729"/>
+                            <constraint firstItem="3ZP-iS-zo6" firstAttribute="bottom" secondItem="da8-Bf-8gG" secondAttribute="bottom" constant="320" id="nN8-ee-zGO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3ZP-iS-zo6"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="UIScrollView" id="hZi-TQ-RMW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gbr-iX-64n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="21.600000000000001" y="97.601199400299862"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="inloopX" width="130" height="42"/>
+    </resources>
+</document>

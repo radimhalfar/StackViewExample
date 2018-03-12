@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kg5-fm-M3y">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--CodeExampleViewController-->
+        <scene sceneID="R9O-Nk-3kr">
+            <objects>
+                <viewController id="kg5-fm-M3y" userLabel="CodeExampleViewController" customClass="CodeExampleViewController" customModule="StackAndScroll" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aTB-Jl-8Qd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T4B-eP-wsi">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hev-c3-9I9">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="667" placeholder="YES" id="RBu-KD-C6s"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="hev-c3-9I9" firstAttribute="leading" secondItem="T4B-eP-wsi" secondAttribute="leading" id="cbq-MI-KnK"/>
+                                    <constraint firstItem="hev-c3-9I9" firstAttribute="top" secondItem="T4B-eP-wsi" secondAttribute="top" id="pNi-jB-2kd"/>
+                                    <constraint firstAttribute="trailing" secondItem="hev-c3-9I9" secondAttribute="trailing" id="qq0-Io-Who"/>
+                                    <constraint firstAttribute="bottom" secondItem="hev-c3-9I9" secondAttribute="bottom" id="sUg-im-ph5"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="T4B-eP-wsi" firstAttribute="leading" secondItem="HFz-Iv-wX5" secondAttribute="leading" id="66c-JG-as0"/>
+                            <constraint firstItem="hev-c3-9I9" firstAttribute="width" secondItem="aTB-Jl-8Qd" secondAttribute="width" id="9Wu-np-2ES"/>
+                            <constraint firstItem="HFz-Iv-wX5" firstAttribute="trailing" secondItem="T4B-eP-wsi" secondAttribute="trailing" id="eqW-pz-RiL"/>
+                            <constraint firstItem="T4B-eP-wsi" firstAttribute="top" secondItem="aTB-Jl-8Qd" secondAttribute="top" id="nub-OT-Czk"/>
+                            <constraint firstItem="HFz-Iv-wX5" firstAttribute="bottom" secondItem="T4B-eP-wsi" secondAttribute="bottom" id="v35-JO-sQb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HFz-Iv-wX5"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Code example" id="JRh-9C-qP4">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="trash" id="uDj-GN-3fG">
+                                <connections>
+                                    <action selector="removeArrangedSubview" destination="kg5-fm-M3y" id="e4L-0f-bdc"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="add" id="z4C-9T-66N">
+                                <connections>
+                                    <action selector="addArrangedView" destination="kg5-fm-M3y" id="Scx-Uy-KE7"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="stackView" destination="hev-c3-9I9" id="RaY-g8-ZWd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="22G-7b-mcU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="85.599999999999994" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
